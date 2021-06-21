@@ -1,12 +1,14 @@
 import './App.css';
-import AddTransection from './components/AddTransection';
+import AddTransection from './components/AddTransaction';
 import Balance from './components/Balance';
 import Header from './components/Header';
 import IncomeExpenses from './components/IncomeExpenses';
-import TransectionList from './components/TransectionList';
+import TransectionList from './components/TransactionList';
+import {GlobalProvider} from './context/GlobalState';
+
 function App() {
   return (
-    <div >
+    <GlobalProvider >
       <Header />
       <div className="container">
         <Balance />
@@ -14,7 +16,7 @@ function App() {
         <TransectionList />
         <AddTransection />
       </div>
-    </div>
+    </GlobalProvider>
   );
 }
 
